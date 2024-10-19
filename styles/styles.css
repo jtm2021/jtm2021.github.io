@@ -116,6 +116,7 @@ span {
     padding: 2rem;
     justify-content: center;
     gap: 5rem;
+    border-radius: 0 0 20px 20px;
 
     a {
         text-decoration: none;
