@@ -96,10 +96,21 @@ span {
 }
 
 .skills {
+    div {
+        margin-bottom: 4rem;
+    }
+
     p {
         font-size: 20px;
     }
+
+    .skills-description {
+        font-size: 1rem;
+        font-style: italic;
+    }
 }
+
+
 
 footer {
     padding-block: 1rem;
@@ -133,6 +144,11 @@ footer {
 
         div {
             width: 30%;
+        }
+
+        &.skills-2 {
+            justify-content: center;
+            gap: 10px;
         }
     }
 
