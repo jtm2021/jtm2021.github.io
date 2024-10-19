@@ -1,0 +1,97 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1 {
+    margin: 0 0 1rem;
+}
+
+#main-header {
+    background-color: #D9D9D9;
+    padding: 2rem 0 1rem 0;
+
+    .location {
+        margin: 0;
+    }
+}
+
+.section-header {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    li {
+        text-align: start;
+        margin-bottom: 1rem;
+    }
+
+    i, .skills-description {
+        color: grey;
+    }
+}
+
+.section-header {
+    margin-top: 5rem;
+
+    h2 {
+        color: forestgreen;
+    }
+
+    &.other-info {
+        border: 1px solid lime;
+        margin-bottom: 3rem;
+
+        hr {
+            border-top: 1px solid lime;
+        }
+    }
+}
+
+span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.skills {
+    p {
+        font-size: 20px;
+    }
+}
+
+footer {
+    padding-block: 1rem;
+
+    a {
+        color: forestgreen;
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.fa-solid, .fas {
+    color: forestgreen;
+}
+
+@media (min-width: 768px) {
+    #main-header .contact-details {
+        display: flex;
+        gap: 2rem;
+        place-content: center;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-around;
+
+        div {
+            width: 30%;
+        }
+    }
+}
