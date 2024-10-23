@@ -41,11 +41,11 @@ h1 {
     }
 
     &.other-info {
-        border: 1px solid lime;
+        border: 2px solid lime;
         margin-bottom: 3rem;
 
         hr {
-            border-top: 1px solid lime;
+            border-top: 2px solid lime;
         }
     }
 
@@ -60,7 +60,7 @@ h1 {
     img {
         width: 100px;
         border-radius: 50%;
-        outline: 1px solid var(--primary);
+        outline: 2px solid var(--primary);
 
         &:hover {
             transform: scale(1.1);
@@ -180,7 +180,7 @@ footer {
     }
 
     .cover-letter p {
-        border: 1px solid var(--primary);
+        border: 2px solid var(--primary);
         padding: 3rem;
         border-radius: 15px;
         box-shadow: 5px 5px 10px var(--primary);
