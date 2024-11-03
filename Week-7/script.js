@@ -1,5 +1,9 @@
-const submitBtn = document.querySelector('.submitBtn');
+const cardContainer = document.querySelector('.card-container');
 
 function submitForm() {
-    console.log("Form Submitted");
+    const userName = document.getElementById("name").value;
+    const userEmail = document.getElementById("email").value;
+    console.log(userName + " " + userEmail);
+    cardContainer.style.display = "none";
 }
+
