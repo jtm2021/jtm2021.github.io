@@ -15,17 +15,21 @@
     <header>
         <h1>Week 7 Lab</h1>
     </header>
-    <div class="card-container">
+    <div class="card-container  form-container">
         <div class="card" style="width: 24rem">
             <form class="card-body">
                 <h2>Form Sample</h2>
                 <label for="name">Name</label>
-                <input id="name" type="text">
+                <input id="name" type="text" required>
                 <label for="email">Email</label>
-                <input id="email" type="email">
-                <button type="button" class="btn btn-primary submit-btn" onclick="submitForm()">Submit</button>
+                <input id="email" type="email" required>
+                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
             </form>
         </div>
+    </div>
+    <div class="card-container message">
+        <h3>Thank You!</h3>
+        <p class="final-message"></p>
     </div>
 </body>
 </html>

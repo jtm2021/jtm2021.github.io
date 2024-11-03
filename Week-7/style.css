@@ -22,3 +22,9 @@ form.card-body {
         margin-top: 1rem;
     }
 }
+
+.message {
+    display: none;
+    text-align: center;
+    font-style: italic;
+}
