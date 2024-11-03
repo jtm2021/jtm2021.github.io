@@ -5,6 +5,7 @@ header h1 {
 }
 
 div.card-container {
+    margin-block: 2rem;
     justify-self: center;
 }
 
