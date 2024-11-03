@@ -7,3 +7,13 @@ header h1 {
 div.card-container {
     justify-self: center;
 }
+
+form.card-body {
+    label {
+        display: block;
+    }
+
+    input {
+        width: 100%;
+    }
+}
