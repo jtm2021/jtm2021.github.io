@@ -1,0 +1,9 @@
+header h1 {
+    text-align: center;
+    background-color: lime;
+    padding-block: 2rem;
+}
+
+div.card-container {
+    justify-self: center;
+}
