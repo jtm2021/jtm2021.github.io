@@ -28,3 +28,15 @@ form.card-body {
     text-align: center;
     font-style: italic;
 }
+
+span.final-user-name {
+    font-weight: bold;
+    color: lime;
+}
+
+span.final-user-email {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: blue;
+}
