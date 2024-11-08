@@ -37,12 +37,15 @@ function startGame(userBet) {
     const result = document.querySelector('.result');
     if (userBet === computerBet) {
         message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        result.style.color = "blue";
         result.textContent = "It's a tie!";
     } else if ((userBet === "scissors" && computerBet === "paper") || (userBet === "rock" && computerBet === "scissors") || (userBet === "paper" && computerBet === "rock")) {
         message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        result.style.color = "lime";
         result.textContent = "You win!";
     } else {
         message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        result.style.color = "red";
         result.textContent = "Haha Computer Wins!";
     }
 }
