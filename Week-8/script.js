@@ -5,6 +5,7 @@ const scissorsBtn = document.getElementById("scissors");
 
 startGameBtn.addEventListener('click', () => {
     document.querySelector('.intro').style.display = 'none';
+    document.querySelector('.game-section').style.display = 'flex';
 });
 
 rockBtn.addEventListener('click', () => {
