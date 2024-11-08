@@ -6,8 +6,6 @@ const scissorsBtn = document.getElementById("scissors");
 startGameBtn.addEventListener('click', () => {
     document.querySelector('.intro').style.display = 'none';
     document.querySelector('.game-section').style.display = 'flex';
-    let answer = computerBet();
-    console.log(answer);
 });
 
 rockBtn.addEventListener('click', () => {
@@ -37,10 +35,13 @@ function startGame(userBet) {
     const computerBet = this.computerBet();
 
     if (userBet === computerBet) {
+        console.log("Computer chose " + computerBet);
         console.log("It's a tie!");
-    } else if ((userBet === "scissors" && computerBet === "paper") || (userBet === "scissors" && computerBet === "paper") || (userBet === "scissors" && computerBet === "paper")) {
+    } else if ((userBet === "scissors" && computerBet === "paper") || (userBet === "rock" && computerBet === "scissors") || (userBet === "paper" && computerBet === "rock")) {
+        console.log("Computer chose " + computerBet);
         console.log("You win!");
     } else {
-        console.log("Haha computer wins!")
+        console.log("Computer chose " + computerBet);
+        console.log("Haha computer wins!");
     }
 }
