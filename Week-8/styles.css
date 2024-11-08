@@ -10,3 +10,8 @@ header, header h1 {
   padding: 1rem;
   text-align: center;
 }
+
+.intro {
+  margin-top: 5rem;
+  text-align: center;
+}
