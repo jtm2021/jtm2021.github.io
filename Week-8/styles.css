@@ -21,14 +21,23 @@ header {
 
 .game-section {
   /*display: none;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .game-card-container {
   display: flex;
   flex-direction: column;
+  max-width: 75vw;
+  align-items: center;
 }
 
 .options {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+
   button {
     border: none;
     border-radius: 50%;
