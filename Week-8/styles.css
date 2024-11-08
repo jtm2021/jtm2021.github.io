@@ -26,7 +26,15 @@ header {
 .game-card-container {
   display: flex;
   flex-direction: column;
-
-
 }
+
+.options {
+  button {
+    border: none;
+    border-radius: 50%;
+  }
+
+  img {
+    max-height: 100px;
+  }
 }
