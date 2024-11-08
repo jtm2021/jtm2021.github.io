@@ -33,15 +33,16 @@ function computerBet() {
 
 function startGame(userBet) {
     const computerBet = this.computerBet();
-
+    const message = document.querySelector('.message');
+    const result = document.querySelector('.result');
     if (userBet === computerBet) {
-        console.log("Computer chose " + computerBet);
-        console.log("It's a tie!");
+        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        result.textContent = "It's a tie!";
     } else if ((userBet === "scissors" && computerBet === "paper") || (userBet === "rock" && computerBet === "scissors") || (userBet === "paper" && computerBet === "rock")) {
-        console.log("Computer chose " + computerBet);
-        console.log("You win!");
+        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        result.textContent = "You win!";
     } else {
-        console.log("Computer chose " + computerBet);
-        console.log("Haha computer wins!");
+        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        result.textContent = "Haha Computer Wins!";
     }
 }
