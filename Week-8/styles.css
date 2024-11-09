@@ -37,6 +37,10 @@ header {
   flex-direction: column;
   max-width: 75vw;
   align-items: center;
+
+  h5 {
+    text-align: center;
+  }
 }
 
 .options {
