@@ -15,3 +15,11 @@ header {
         color: white;
     }
 }
+
+.btn.btn-success {
+    background-color: #127e7e;
+
+    &:hover {
+        scale: 1.05;
+    }
+}
