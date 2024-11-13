@@ -5,14 +5,16 @@ const scissorsBtn = document.getElementById("scissors");
 const roundDisplay = document.getElementById("round-display");
 const yourScore = document.getElementById('yourScore');
 const opponentScore = document.getElementById('opponentScore');
+const counter = document.getElementById('counter');
 
-let round = 0;
+let round = 1;
 let userScore = 0;
 let computerScore = 0;
 
 startGameBtn.addEventListener('click', () => {
     document.querySelector('.intro').style.display = 'none';
     document.querySelector('.game-section').style.display = 'flex';
+    counter.style.display = 'flex';
 });
 
 rockBtn.addEventListener('click', () => {
@@ -39,12 +41,13 @@ function computerBet() {
 }
 
 function startGame(userBet) {
-    if (round === 2) {
+    if (round === 3) {
         determineWinner();
     } else {
         const computerBet = this.computerBet();
         this.checkMatch(userBet, computerBet);
         round++;
+        roundDisplay.innerHTML = round.toString();
     }
 }
 
