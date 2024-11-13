@@ -18,5 +18,7 @@ function formulateLyrics() {
 function displayLyrics() {
     let songLyrics =  this.formulateLyrics();
     const lyrics = document.getElementById("lyrics");
+    const btn = document.getElementById("showLyrics");
+    btn.style.display = "none";
     lyrics.innerText = songLyrics;
 }
