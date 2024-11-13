@@ -6,7 +6,9 @@ const roundDisplay = document.getElementById("round-display");
 const yourScore = document.getElementById('yourScore');
 const opponentScore = document.getElementById('opponentScore');
 const counter = document.getElementById('counter');
+const finalRoundMessage = document.getElementById("final-round-message");
 
+let finalMessage = '';
 let round = 1;
 let userScore = 0;
 let computerScore = 0;
@@ -48,18 +50,23 @@ function startGame(userBet) {
         this.checkMatch(userBet, computerBet);
         round++;
         roundDisplay.innerHTML = round.toString();
+        yourScore.innerHTML = userScore.toString();
+        opponentScore.innerHTML = computerScore.toString();
     }
 }
 
 function checkMatch(userBet, computerBet) {
     const message = document.querySelector('.message');
     if (userBet === computerBet) {
-        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ". It's a tie for this round.";
+        finalMessage = "You chose " + userBet + " and the computer chose " + computerBet + ". It's a tie for the final round.";
     } else if ((userBet === "scissors" && computerBet === "paper") || (userBet === "rock" && computerBet === "scissors") || (userBet === "paper" && computerBet === "rock")) {
-        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ". You win for this round.";
+        finalMessage = "You chose " + userBet + " and the computer chose " + computerBet + ". You won the final round.";
         userScore++;
     } else {
-        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ".";
+        message.textContent = "You chose " + userBet + " and the computer chose " + computerBet + ". The computer won this round.";
+        finalMessage = "You chose " + userBet + " and the computer chose " + computerBet + ". The computer won the final round.";
         computerScore++;
     }
 }
@@ -76,6 +83,9 @@ function determineWinner() {
         result.style.color = "red";
         result.textContent = "Sorry but the Computer Won :(";
     }
+    document.querySelector('.round-counter').style.display = 'none';
+    finalRoundMessage.innerHTML = finalMessage;
+    finalRoundMessage.style.display = 'flex';
     document.querySelector('.message').style.display = 'none';
     document.querySelector('.game-section').style.display = 'none';
 }
