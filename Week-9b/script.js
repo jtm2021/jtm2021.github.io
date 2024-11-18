@@ -82,12 +82,12 @@ function determineWinner() {
     document.querySelector('.game-section').style.display = 'none';
     if (userScore === computerScore) {
         result.style.color = "blue";
-        result.textContent = "It's a tie!";
+        result.textContent = "It's a tie! Total score: " + userScore + "-" + computerScore;
     } else if (userScore > computerScore) {
         result.style.color = "lime";
-        result.textContent = "Congratulations! You win!";
+        result.textContent = "Congratulations! You win with a total score of " + userScore + ".";
     } else {
         result.style.color = "red";
-        result.textContent = "Sorry but the Computer Won :(";
+        result.textContent = "Sorry but the Computer Won with a total score of " + computerScore + ".";
     }
 }
