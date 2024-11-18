@@ -43,15 +43,14 @@ function computerBet() {
 }
 
 function startGame(userBet) {
+    const computerBet = this.computerBet();
+    this.checkMatch(userBet, computerBet);
+
     if (round === 3) {
         determineWinner();
     } else {
-        const computerBet = this.computerBet();
-        this.checkMatch(userBet, computerBet);
         round++;
         roundDisplay.innerHTML = round.toString();
-        yourScore.innerHTML = userScore.toString();
-        opponentScore.innerHTML = computerScore.toString();
     }
 }
 
@@ -73,6 +72,13 @@ function checkMatch(userBet, computerBet) {
 
 function determineWinner() {
     const result = document.querySelector('.result');
+    document.querySelector('.round-counter').style.display = 'none';
+    finalRoundMessage.innerHTML = finalMessage;
+    finalRoundMessage.style.display = 'flex';
+    document.querySelector('.message').style.display = 'none';
+    document.querySelector('.game-section').style.display = 'none';
+    yourScore.innerHTML = userScore.toString();
+    opponentScore.innerHTML = computerScore.toString();
     if (userScore === computerScore) {
         result.style.color = "blue";
         result.textContent = "It's a tie!";
@@ -83,9 +89,4 @@ function determineWinner() {
         result.style.color = "red";
         result.textContent = "Sorry but the Computer Won :(";
     }
-    document.querySelector('.round-counter').style.display = 'none';
-    finalRoundMessage.innerHTML = finalMessage;
-    finalRoundMessage.style.display = 'flex';
-    document.querySelector('.message').style.display = 'none';
-    document.querySelector('.game-section').style.display = 'none';
 }
