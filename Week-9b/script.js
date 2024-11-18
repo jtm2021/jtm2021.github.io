@@ -52,6 +52,9 @@ function startGame(userBet) {
         round++;
         roundDisplay.innerHTML = round.toString();
     }
+
+    yourScore.innerHTML = userScore.toString();
+    opponentScore.innerHTML = computerScore.toString();
 }
 
 function checkMatch(userBet, computerBet) {
@@ -77,8 +80,6 @@ function determineWinner() {
     finalRoundMessage.style.display = 'flex';
     document.querySelector('.message').style.display = 'none';
     document.querySelector('.game-section').style.display = 'none';
-    yourScore.innerHTML = userScore.toString();
-    opponentScore.innerHTML = computerScore.toString();
     if (userScore === computerScore) {
         result.style.color = "blue";
         result.textContent = "It's a tie!";
