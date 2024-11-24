@@ -8,6 +8,12 @@ addGroceryItemBtn.addEventListener('click', () => {
     addGroceryItem();
 })
 
+groceryInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        addGroceryItem();
+    }
+});
+
 function addGroceryItem() {
     const userGroceryInput = groceryInput.value;
     const groceryItem = document.createElement('li');
