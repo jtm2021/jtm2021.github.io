@@ -17,6 +17,8 @@ function addGroceryItem() {
     if (isInputValid) {
         addItemToList(groceryItem);
         groceryInput.value = '';
+
+        createRemoveButton(groceryItem);
     }
 }
 
@@ -31,4 +33,13 @@ function validateUserInput(userInput) {
     } else {
         isInputValid = true;
     }
+}
+
+function createRemoveButton(specificItem) {
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove This Item';
+    removeBtn.addEventListener('click', () => {
+        groceryList.removeChild(specificItem);
+    })
+    specificItem.appendChild(removeBtn);
 }
