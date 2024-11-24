@@ -9,3 +9,11 @@ header {
         color: white;
     }
 }
+
+#grocery-list li {
+    margin-bottom: 1rem;
+
+    & button {
+        margin-left: 1rem;
+    }
+}
