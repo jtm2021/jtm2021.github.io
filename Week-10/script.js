@@ -11,5 +11,9 @@ function addGroceryItem() {
     const groceryItem = document.createElement('li');
     groceryItem.textContent = userGroceryInput;
 
+    addItemToList(groceryItem);
+}
+
+function addItemToList(groceryItem) {
     groceryList.appendChild(groceryItem);
 }
