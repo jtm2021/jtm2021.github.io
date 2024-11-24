@@ -38,7 +38,7 @@ function validateUserInput(userInput) {
 function createRemoveButton(specificItem) {
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Remove This Item';
-    removeBtn.classList.add('btn', 'btn-danger');
+    removeBtn.classList.add('btn', 'btn-danger', 'remove-item-btn');
     removeBtn.addEventListener('click', () => {
         groceryList.removeChild(specificItem);
     })

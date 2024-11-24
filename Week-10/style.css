@@ -17,3 +17,8 @@ header {
         margin-left: 1rem;
     }
 }
+
+.remove-item-btn {
+    border-radius: 50px;
+    padding: 3px 20px;
+}
